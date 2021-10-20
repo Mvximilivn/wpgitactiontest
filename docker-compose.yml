@@ -9,7 +9,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: wp
-      MYSQL_USER: root
+      MYSQL_USER: max
       MYSQL_PASSWORD: password
     networks:
       - wp
@@ -23,7 +23,7 @@ services:
     volumes: ["./html:/var/www/html"]
     environment:
       WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_USER: max
       WORDPRESS_DB_PASSWORD: password
       WORDPRESS_DB_NAME: wp
     networks:
