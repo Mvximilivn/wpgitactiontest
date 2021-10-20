@@ -1,0 +1,72 @@
+$mq-mobile-sm : 350px !default;
+$mq-mobile : 500px !default;
+$mq-tablet-sm : 700px !default;
+$mq-tablet : 1020px !default;
+$mq-tablet-min : 1021px !default;
+$mq-medium : calc(#{$innerWidth} + #{$innerPadding} * 2);
+
+@mixin large {
+    @media (min-width : ($mq-medium)-1) {
+        @content;
+    }
+}
+@mixin medium {
+    @media (max-width : $mq-medium) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width : $mq-tablet) {
+        @content;
+    }
+}
+
+@mixin tablet-sm {
+    @media (max-width : $mq-tablet-sm) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width : $mq-mobile) {
+        @content;
+    }
+}
+
+@mixin mobile-sm {
+    @media (max-width : $mq-mobile-sm) {
+        @content;
+    }
+}
+
+.show-lg{display: none;}
+@include large{
+    .hide-lg{display: none;}
+    .show-lg{display: block;}
+}
+.show-md{display: none;}
+@include medium{
+    .hide-md{display: none;}
+    .show-md{display: block;}
+}
+.show-t{display: none;}
+@include tablet{
+    .hide-t{display: none;}
+    .show-t{display: block;}
+}
+.show-ts{display: none;}
+@include tablet-sm{
+    .hide-ts{display: none;}
+    .show-ts{display: block;}
+}
+.show-m{display: none;}
+@include mobile{
+    .hide-m{display: none;}
+    .show-m{display: block;}
+}
+.show-ms{display: none;}
+@include mobile-sm{
+    .hide-ms{display: none;}
+    .show-ms{display: block;}
+}

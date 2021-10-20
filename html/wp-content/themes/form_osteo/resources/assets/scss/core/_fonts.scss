@@ -1,0 +1,33 @@
+/***
+** FONT WEIGHT
+** - 100 Thin (Hairline)
+** - 200 ExtraLight (UltraLight)
+** - 300 Light
+** - xxx Book (sometimes heavier than Regular)
+** - 400 Regular / Normal
+** - 500 Medium
+** - 600 SemiBold (DemiBold)
+** - 700 Bold
+** - 800 ExtraBold (UltraBold)
+** - 900 Black (Heavy)
+***/
+
+@mixin load-font($font-name, $font-file, $font-weight: 400, $font-style: normal){
+  $svg-id: replace("${font-file}", "-", "", "g");
+
+  font-family: '#{$font-name}';
+  src: url('../../fonts/#{$font-file}.woff2') format('woff2'),
+  url('../../fonts/#{$font-file}.woff') format('woff');
+  font-weight: $font-weight;
+  font-style: $font-style;
+}
+
+//@font-face {@include load-font('roboto', 'roboto-light' , 300);}
+//@font-face {@include load-font('roboto', 'roboto-regular');}
+//@font-face {@include load-font('roboto', 'roboto-medium', 500);}
+//@font-face {@include load-font('roboto', 'roboto-bold'  , 700);}
+
+//@font-face {@include load-font('ubuntu', 'ubuntu-light' , 300);}
+//@font-face {@include load-font('ubuntu', 'ubuntu-regular');}
+//@font-face {@include load-font('ubuntu', 'ubuntu-medium', 500);}
+//@font-face {@include load-font('ubuntu', 'ubuntu-bold'  , 700);}

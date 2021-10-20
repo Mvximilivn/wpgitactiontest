@@ -1,0 +1,18 @@
+.heading {
+    
+}
+.heading__image {
+    position: relative;
+    display: flex; justify-content: center; align-items: center;
+    min-height: 400px; padding-top: 40px;
+    background-size: cover; background-position: center;
+    &::before {
+        content: ''; position: absolute; left: 0; top: 0; z-index: 1;
+        width: 100%; height: 100%;
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1));
+    }
+}
+.heading__title {
+    position: relative; z-index: 2;
+    text-align: center; color: white; font-weight: 200; font-size: 54px; text-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
